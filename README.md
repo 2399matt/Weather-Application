@@ -4,4 +4,6 @@ Thymeleaf/BootStrap used for page.
 Application.properties file excluded.
 
 openweatherkey = your API key
+
+
 openweatherurl / pirateURL = API URL used for GET.
