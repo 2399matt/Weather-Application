@@ -2,3 +2,6 @@ Weather application project to learn more about external API consumption with Sp
 Using openWeatherAPI for geo-location coordinates and weather data. 
 Thymeleaf/BootStrap used for page.
 Application.properties file excluded.
+
+openweatherkey = your API key
+openweatherurl / pirateURL = API URL used for GET.
