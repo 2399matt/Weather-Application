@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+        <tr>
+            <th>Humidity:</th>
+            <th>Temperature:</th>
+            <th>Summary:</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td th:text="${humidity} +'%'"></td>
+            <td th:text="${temperature} + ' Degrees'"></td>
+            <td th:text="${summary}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/LocationForm}">Back To Form</a>
+</div>
+
+</body>
+</html>
