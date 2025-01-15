@@ -12,7 +12,8 @@ public class Location {
     private String zipCode;
 
     @NotNull(message = "is required")
-    @Size(min = 1, message = "Country code must be two characters. (e.g. US)")
+    @Size(min = 2, message = "Country code must be two characters. (e.g. US)")
+    @Size(max = 2, message = "Country code must be two characters. (e.g. US)")
     private String countryCode;
 
     public Location() {

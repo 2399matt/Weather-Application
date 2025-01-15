@@ -16,6 +16,8 @@ public class LocationServiceImpl implements LocationService {
     }
 
     public Coordinates getCoordinates(Location location) {
+        if(location == null)
+            throw new RuntimeException("Invalid location.");
         return openConfig.webClientBuilder(location).build().get().retrieve().bodyToMono(Coordinates.class).block();
     }
 }

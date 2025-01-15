@@ -2,7 +2,9 @@ package com.WeatherProject.WeatherProject.controller;
 
 import com.WeatherProject.WeatherProject.location.Coordinates;
 import com.WeatherProject.WeatherProject.location.Location;
+import com.WeatherProject.WeatherProject.service.LocationService;
 import com.WeatherProject.WeatherProject.service.LocationServiceImpl;
+import com.WeatherProject.WeatherProject.service.WeatherService;
 import com.WeatherProject.WeatherProject.service.WeatherServiceImpl;
 import com.WeatherProject.WeatherProject.weather.WeatherReport;
 import jakarta.validation.Valid;
@@ -18,11 +20,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/")
 public class WeatherController {
-    private final LocationServiceImpl locationService;
-    private final WeatherServiceImpl weatherService;
+    private final LocationService locationService;
+    private final WeatherService weatherService;
 
     @Autowired
-    public WeatherController(LocationServiceImpl locationService, WeatherServiceImpl weatherService) {
+    public WeatherController(LocationService locationService, WeatherService weatherService) {
         this.locationService = locationService;
         this.weatherService = weatherService;
     }

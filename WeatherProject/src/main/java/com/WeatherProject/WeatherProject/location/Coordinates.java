@@ -20,7 +20,7 @@ public class Coordinates {
         return lat;
     }
 
-    public void setLat(long latitude) {
+    public void setLat(double latitude) {
         this.lat = latitude;
     }
 
@@ -28,7 +28,7 @@ public class Coordinates {
         return lon;
     }
 
-    public void setLon(long longitude) {
+    public void setLon(double longitude) {
         this.lon = longitude;
     }
 

@@ -16,6 +16,8 @@ public class WeatherServiceImpl implements  WeatherService{
     }
 
     public WeatherReport getWeatherReport(Coordinates coordinates) {
+        if(coordinates == null)
+            throw new RuntimeException("Invalid location.");
         return pirateConfig.webClientBuilder(coordinates).build().get().retrieve().bodyToMono(WeatherReport.class).block();
     }
 }
