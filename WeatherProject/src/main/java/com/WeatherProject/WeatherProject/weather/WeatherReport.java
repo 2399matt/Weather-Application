@@ -14,6 +14,13 @@ public class WeatherReport {
 
     }
 
+    /**
+     * WeatherReport class is used to bundle all the weather information into one object.
+     *
+     * @param timezone User's timezone information.
+     * @param weather  Weather object used to retrieve the summary of the weather.
+     * @param main     Main object used to retrieve the temp/humidity of the weather.
+     */
     @Autowired
     public WeatherReport(String timezone, List<Weather> weather, Main main) {
         this.timezone = timezone;

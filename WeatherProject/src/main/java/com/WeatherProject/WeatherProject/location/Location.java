@@ -6,7 +6,9 @@ import jakarta.validation.constraints.Size;
 
 
 public class Location {
-
+    /**
+     * Validation on fields for this class. We need a valid zip-code and country code for the API call.
+     */
     @NotNull(message = "is required")
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "only 5 digits/characters.")
     private String zipCode;
@@ -20,6 +22,12 @@ public class Location {
 
     }
 
+    /**
+     * Location class used to store the user's input for the geolocation API call.
+     *
+     * @param zipCode     The user's zipcode.
+     * @param countryCode The user's country code.
+     */
     public Location(String zipCode, String countryCode) {
         this.zipCode = zipCode;
         this.countryCode = countryCode;

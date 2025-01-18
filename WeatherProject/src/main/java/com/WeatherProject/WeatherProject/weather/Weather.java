@@ -10,6 +10,11 @@ public class Weather {
 
     }
 
+    /**
+     * Weather class used to retrieve info from the JSON sent by the weather-API.
+     *
+     * @param description Short summary of the user's local weather.
+     */
     public Weather(String description) {
         this.description = description;
     }

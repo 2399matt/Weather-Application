@@ -11,6 +11,13 @@ public class Coordinates {
 
     }
 
+    /**
+     * Coordinates class used to allow Jackson to take in the latitude and longitude from the JSON file sent by the
+     * geolocation API.
+     *
+     * @param latitude  latitude of the user's location.
+     * @param longitude longitude of the user's location.
+     */
     public Coordinates(double latitude, double longitude) {
         this.lat = latitude;
         this.lon = longitude;
